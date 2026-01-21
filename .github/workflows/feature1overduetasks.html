@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  /* 1. Card Container */
+  .card {
+    background-color: #eaeef1;
+    width: 100%;
+    max-width: 450px; /* Slightly wider to fit date on the same line */
+    padding: 25px;
+    border-radius: 20px; /* More rounded as per image */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  /* 2. Header */
+  .card-title {
+    color: #1a75ff; /* Bright Blue */
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  /* 3. List Styles */
+  .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* 4. The Row Layout */
+  .task-item {
+    display: flex;
+    align-items: center; /* Vertically center everything */
+    padding: 15px 0;
+    /* Note: The image shows no separator lines, so I removed the border-bottom */
+  }
+
+  /* 5. The Icon (Red ! ) */
+  .icon-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #ff5e57; /* Red Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+
+  /* 6. The Task Name */
+  .task-name {
+    color: #ff5e57; /* Red Text */
+    font-weight: bold;
+    font-size: 16px;
+    flex-grow: 1;   /* This pushes the date/avatar to the right */
+    
+    /* Truncation logic */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+  }
+
+  /* 7. The Date */
+  .task-date {
+    color: #9aa5b1; /* Light gray text */
+    font-size: 14px;
+    white-space: nowrap; /* Keeps date on one line */
+    margin-right: 15px;
+  }
+
+  /* 8. The Avatar */
+  .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h3 class="card-title">Overdue Work Items</h3>
+    
+    <ul class="task-list">
+      
+      <li class="task-item">
+        <div class="icon-circle">!</div>
+        <span class="task-name">Update README</span>
+        <span class="task-date">Thu, Dec 23</span>
+        <img src="https://i.pravatar.cc/100?img=5" class="avatar" alt="User">
+      </li>
+
+      <li class="task-item">
+        <div class="icon-circle">!</div>
+        <span class="task-name">Fix typo on landing page</span>
+        <span class="task-date">Thu, Dec 23</span>
+        <img src="https://i.pravatar.cc/100?img=5" class="avatar" alt="User">
+      </li>
+
+      <li class="task-item">
+        <div class="icon-circle">!</div>
+        <span class="task-name">Migrate DB</span>
+        <span class="task-date">Thu, Dec 23</span>
+        <img src="https://i.pravatar.cc/100?img=5" class="avatar" alt="User">
+      </li>
+
+    </ul>
+  </div>
+
+</body>
+</html>
